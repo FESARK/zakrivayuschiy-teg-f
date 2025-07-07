@@ -13,22 +13,19 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font), sans-serif;
-  font-weight: var(--main-font-common-wght), 400;
-  font-variation-settings: 'wght' var(----main-font-common-wght);
   background-image: var(--bg-gradient);
   background-attachment: fixed;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header {
-  background-color: var(--content-bg);
-  font-family: var(--accent-font), monospace;
+  font-family: var(--accent-font, monospace);
   text-align: center;
   text-transform: uppercase;
   padding-block: var(--header-padding-block);
-  margin-block: var(--margin-block-align);
-  margin-inline: auto;
+  margin-block: var(--margin-block-align, 6.25rem);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -38,6 +35,8 @@
   inline-size: var(--blocks-width);
   border-block: var(--border);
   border-inline: var(--border);
+  background-color: var(--content-bg, #fff);
+  margin-inline: auto;
 }
 
 .header-title {
@@ -47,4 +46,96 @@
 
 .header-text {
   font-size: var(--header-text-font-size);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+}
+
+.card_title {
+  font-size: var(--main-font-size, 1.125rem);
+  font-weight: var(--main-font-title-wght, 700);
+  padding-inline: var(--card-title-inline-padding, 0.625rem);
+  padding-block: var(--card-title-block-padding, 0.313rem);
+  font-variation-settings: 'wght' var(--main-font-title-wght, 700);
+  line-height: 1.313rem;
+}
+
+.card_image-container {
+  position: relative;
+  border-block-end: var(--border);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 100%;
+  display: block;
+}
+
+.label {
+  font-family: var(--accent-font, monospace);
+  font-size: var(--accent-font-size-s, 0.875rem);
+  position: absolute;
+  top: 1.563rem;
+  right: 0.688rem;
+  opacity: 50%;
+  mix-blend-mode: hard-light;
+  text-shadow:
+    -1px 0 rgba(255, 255, 255, 1),
+    0 1px rgba(255, 255, 255, 1),
+    1px 0 rgba(255, 255, 255, 1),
+    0 -1px rgba(255, 255, 255, 1);
+}
+
+@supports ((text-stroke: 1px rgba(255, 255, 255, 1)) or (-webkit-text-stroke: 1px rgba(255, 255, 255, 1))) {
+  .label {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 1);
+    text-stroke: 1px rgba(255, 255, 255, 1);
+    text-shadow: none;
+  }
+}
+
+.card_text-container {
+  padding-block-start: var(--card-text-padding);
+  padding-inline: var(--card-text-padding);
+  border-block-start: var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.688rem;
+}
+
+.card__controls {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-inline-end: var(--card-text-padding);
+  gap: 0.375rem;
+  margin-block-start: 1.438rem;
+}
+
+.card__icon-button {
+  border: none;
+  background-color: inherit;
+}
+
+.card__like-button {
+  border: var(--border);
+  background-color: inherit;
+  font-family: var(--accent-font, monospace);
+  font-size: var(--accent-font-size-s, 0.875rem);
+  padding-block: var( --like-button-block-padding);
+  padding-inline: var(--like-button-inline-padding);
+  line-height: 0.9em;
+}
+
+.like-icon {
+  inline-size: 39px;
+  block-size: 36px;
+}
+
+.card {
+  padding-block-end: var(--card-text-padding);
 }

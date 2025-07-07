@@ -18,4 +18,9 @@
   --border: 2px solid #000;
   --header-padding-block: clamp(7.5rem, 0.751vw + 7.324rem, 8rem);
   --margin-block-align: 6.25rem;
+  --card-title-inline-padding: 0.625rem;
+  --card-title-block-padding: 0.313rem;
+  --card-text-padding: 1.563rem;
+  --like-button-block-padding: 0.625rem;
+  --like-button-inline-padding: 2.188rem;
 }
