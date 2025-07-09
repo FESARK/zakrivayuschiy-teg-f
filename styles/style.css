@@ -65,6 +65,7 @@
   padding-block: var(--card-title-block-padding, 0.313rem);
   font-variation-settings: 'wght' var(--main-font-title-wght, 700);
   line-height: 1.313rem;
+  border-block-end: var(--border);
 }
 
 .card_image-container {
@@ -133,10 +134,35 @@
 .button {
   border-inline: var(--border);
   border-block: var(--border);
-  background-color: #fff;
-  color: #fff;
+  background-color: var(--content-bg);
+  color: var(--content-bg);
   font-family: var(--accent-font, monospace);
   font-size: var(--accent-font-size-s, 0.875rem);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.button::before{
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  transform: translateX(0);
 }
 
 .card__like-button {
@@ -158,8 +184,8 @@
   justify-content: center;
   align-items: center;
   margin-inline: auto;
-  inline-size: var(--footer-button-inline-size);
   padding-block: var(--footer-button-padding-block);
+  padding-inline: var(--footer-button-padding-inline);
 }
 
 .button__text {
@@ -218,4 +244,47 @@
 .dialog-modal-button__text {
   text-transform: uppercase;
   line-height: 0.9em;
+}
+
+.boy {
+  filter: brightness(150%);
+}
+
+.man {
+  filter: saturate(200%);
+}
+
+.notebook {
+  filter: brightness(85%);
+}
+
+.boss {
+  filter: hue-rotate(320deg);
+}
+
+.hands {
+ filter: sepia(80%);
+}
+
+.focus {
+  filter: blur(3px) contrast(80%);
+}
+
+.phone {
+  filter: contrast(120%);
+}
+
+.mountain {
+  filter: saturate(150%);
+}
+
+@media (width > 375px) {
+  .footer__save-button {
+    flex-direction: row;
+  }
+
+  .button__svg {
+    width: 21px;
+    height: 21px;
+  }
 }

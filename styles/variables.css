@@ -14,8 +14,9 @@
     repeating-linear-gradient(#d3d3d3, #d3d3d3 2px, rgba(211 211 211 / 0) 2px, rgba(211 211 211 / 0) 4px),
     linear-gradient(#e7e7e7, #e7e7e7 0.01%, #1a1a1a);
   --content-bg: #fff;
+  --accent-color: #000;
   --blocks-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
-  --border: 2px solid #000;
+  --border: 2px solid var(--accent-color);
   --header-padding-block: clamp(7.5rem, 0.751vw + 7.324rem, 8rem);
   --margin-block-align: 6.25rem;
   --card-title-inline-padding: 0.625rem;
@@ -24,12 +25,18 @@
   --like-button-block-padding: 0.625rem;
   --like-button-inline-padding: 1.063rem;
   --footer-margin-block-start: 3.125rem;
-  --footer-button-inline-size: clamp(19.125rem, 2.723vw + 18.487rem, 20.938rem);
   --footer-button-padding-block: 0.938rem;
+  --footer-button-padding-inline: 1.25rem;
   --footer-dialog-inline-size: clamp(21.313rem, 1.127vw + 21.048rem, 22.063rem);
   --footer-dialog-padding-block: 1.875rem;
   --footer-dialog-padding-inline: 2.313rem;
   --footer-dialog-modal-button-margin-block-start: 1.875rem;
   --footer-dialog-modal-button-padding-block: 0.563rem;
   --footer-dialog-modal-button-padding-inline: 7rem;
+}
+
+@media (width > 375px) {
+  .footer__save-button {
+    --footer-button-padding-block: 1.156rem;
+  }
 }
