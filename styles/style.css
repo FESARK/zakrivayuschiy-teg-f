@@ -54,6 +54,10 @@
   gap: 3.125rem;
 }
 
+.card {
+  padding-block-end: var(--card-text-padding);
+}
+
 .card_title {
   font-size: var(--main-font-size, 1.125rem);
   font-weight: var(--main-font-title-wght, 700);
@@ -116,26 +120,102 @@
   margin-block-start: 1.438rem;
 }
 
-.card__icon-button {
-  border: none;
-  background-color: inherit;
-}
-
-.card__like-button {
-  border: var(--border);
-  background-color: inherit;
-  font-family: var(--accent-font, monospace);
-  font-size: var(--accent-font-size-s, 0.875rem);
-  padding-block: var( --like-button-block-padding);
-  padding-inline: var(--like-button-inline-padding);
-  line-height: 0.9em;
-}
-
 .like-icon {
   inline-size: 39px;
   block-size: 36px;
 }
 
-.card {
-  padding-block-end: var(--card-text-padding);
+.card__icon-button {
+  border: none;
+  background-color: inherit;
+}
+
+.button {
+  border-inline: var(--border);
+  border-block: var(--border);
+  background-color: #fff;
+  color: #fff;
+  font-family: var(--accent-font, monospace);
+  font-size: var(--accent-font-size-s, 0.875rem);
+}
+
+.card__like-button {
+  padding-block: var( --like-button-block-padding);
+  padding-inline: var(--like-button-inline-padding);
+  min-inline-size: 8.125rem;
+}
+
+.footer {
+  margin-block-start: var(--footer-margin-block-start);
+  margin-inline: auto;
+  margin-block-end: var(--margin-block-align);
+}
+
+.footer__save-button {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  inline-size: var(--footer-button-inline-size);
+  padding-block: var(--footer-button-padding-block);
+}
+
+.button__text {
+  mix-blend-mode: difference;
+
+}
+
+.button__svg {
+  inline-size: 28px;
+  block-size: 28px;
+  mix-blend-mode: difference;
+}
+
+.dialog {
+  inline-size: var(--footer-dialog-inline-size);
+  border-inline: var(--border);
+  border-block: var(--border);
+  padding-block: var(--footer-dialog-padding-block);
+  padding-inline: var(--footer-dialog-padding-inline);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  column-gap: 20px;
+  place-items: center;
+  row-gap: 30px;
+  position: fixed;
+  inset: 0;
+}
+
+.dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+} 
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dialog__svg {
+  block-size: 39px;
+  inline-size: 39px;
+}
+
+.dialog-modal-button {
+  padding-block: var(--footer-dialog-modal-button-padding-block);
+  padding-inline: var(--footer-dialog-modal-button-padding-inline);
+  grid-column: 1 / span 2;
+}
+
+.dialog-text {
+  font-family: var(--accent-font);
+  font-size: var(--accent-font-size-s);
+  line-height: 1.5em;
+}
+
+.dialog-modal-button__text {
+  text-transform: uppercase;
+  line-height: 0.9em;
 }

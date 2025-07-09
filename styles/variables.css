@@ -22,5 +22,14 @@
   --card-title-block-padding: 0.313rem;
   --card-text-padding: 1.563rem;
   --like-button-block-padding: 0.625rem;
-  --like-button-inline-padding: 2.188rem;
+  --like-button-inline-padding: 1.063rem;
+  --footer-margin-block-start: 3.125rem;
+  --footer-button-inline-size: clamp(19.125rem, 2.723vw + 18.487rem, 20.938rem);
+  --footer-button-padding-block: 0.938rem;
+  --footer-dialog-inline-size: clamp(21.313rem, 1.127vw + 21.048rem, 22.063rem);
+  --footer-dialog-padding-block: 1.875rem;
+  --footer-dialog-padding-inline: 2.313rem;
+  --footer-dialog-modal-button-margin-block-start: 1.875rem;
+  --footer-dialog-modal-button-padding-block: 0.563rem;
+  --footer-dialog-modal-button-padding-inline: 7rem;
 }
