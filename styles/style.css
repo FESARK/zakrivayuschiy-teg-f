@@ -127,8 +127,18 @@
 }
 
 .card__icon-button {
-  border: none;
+  border: 2px solid transparent;
   background-color: inherit;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
 }
 
 .button {
@@ -141,6 +151,7 @@
   transition: box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .button:focus {
