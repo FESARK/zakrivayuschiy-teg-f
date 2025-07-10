@@ -6,6 +6,7 @@
   --main-font-common-wght: 400;
   --main-font-title-wght: 700;
   --main-font-size: 1.125rem;
+  --main-margin-block-end: 6.25rem;
   --accent-font-size-s: 0.875rem;
   --header-title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --header-text-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
@@ -22,23 +23,21 @@
   --card-title-inline-padding: 0.625rem;
   --card-title-block-padding: 0.313rem;
   --card-text-padding: 1.563rem;
-  --like-button-block-padding: 0.625rem;
+  --like-button-block-padding: 0.813rem;
   --like-button-inline-padding: 1.063rem;
-  --footer-margin-block-start: 3.125rem;
-  --footer-button-padding-block: 0.938rem;
-  --footer-button-padding-inline: 1.25rem;
-  --footer-dialog-inline-size: clamp(21.313rem, 1.127vw + 21.048rem, 22.063rem);
-  --footer-dialog-padding-block: 1.875rem;
-  --footer-dialog-padding-inline: 2.313rem;
-  --footer-dialog-modal-button-margin-block-start: 1.875rem;
-  --footer-dialog-modal-button-padding-block: 0.563rem;
-  --footer-dialog-modal-button-padding-inline: 7rem;
+  --save-button-padding-block: 0.938rem;
+  --save-button-padding-inline: 1.25rem;
+  --dialog-inline-size: clamp(21.313rem, 1.127vw + 21.048rem, 22.063rem);
+  --dialog-padding-block: 1.875rem;
+  --dialog-padding-inline: 2.313rem;
+  --dialog-modal-button-padding-block: 0.563rem;
+  --dialog-modal-button-padding-inline: 7rem;
   --heart-contour-color: #000;
   --animation-fill-color: red;
 }
 
 @media (width > 375px) {
-  .footer__save-button {
-    --footer-button-padding-block: 1.156rem;
+  .save-button {
+    --save-button-padding-block: 1.156rem;
   }
 }
