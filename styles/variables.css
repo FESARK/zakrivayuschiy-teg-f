@@ -33,6 +33,8 @@
   --footer-dialog-modal-button-margin-block-start: 1.875rem;
   --footer-dialog-modal-button-padding-block: 0.563rem;
   --footer-dialog-modal-button-padding-inline: 7rem;
+  --heart-contour-color: #000;
+  --animation-fill-color: red;
 }
 
 @media (width > 375px) {
