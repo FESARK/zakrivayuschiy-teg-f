@@ -213,7 +213,7 @@
   box-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.button::before{
+.button::before {
   content: '';
   display: block;
   position: absolute;

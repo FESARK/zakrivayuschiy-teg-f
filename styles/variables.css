@@ -8,7 +8,7 @@
   --main-font-size: 1.125rem;
   --accent-font-size-s: 0.875rem;
   --header-title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  --header-text-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);;
+  --header-text-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --bg-gradient: 
     repeating-linear-gradient( 90deg, #d3d3d3, #d3d3d3 2px, rgba(211 211 211 / 0) 2px, rgba(211 211 211 / 0) 4px),
     repeating-linear-gradient(#d3d3d3, #d3d3d3 2px, rgba(211 211 211 / 0) 2px, rgba(211 211 211 / 0) 4px),
