@@ -180,6 +180,9 @@
 }
 
 .card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid transparent;
   background-color: inherit;
   cursor: pointer;
@@ -230,7 +233,7 @@
 }
 
 .card__like-button {
-  padding-block: var( --like-button-block-padding);
+  padding-block: var(--like-button-block-padding);
   padding-inline: var(--like-button-inline-padding);
   min-inline-size: 8.125rem;
 }
@@ -258,9 +261,9 @@
 }
 
 .dialog {
-  inline-size: var(--dialog-inline-size);
+  /* inline-size: var(--dialog-inline-size);
   border-inline: var(--border);
-  border-block: var(--border);
+  border-block: var(--border);  для коррекции замечания */
   padding-block: var(--dialog-padding-block);
   padding-inline: var(--dialog-padding-inline);
   margin-inline: auto;
@@ -269,8 +272,8 @@
   column-gap: 20px;
   place-items: center;
   row-gap: 30px;
-  position: fixed;
-  inset: 0;
+  /* position: fixed;
+  inset: 0; */
 }
 
 .dialog:not([open]) {
@@ -340,6 +343,10 @@
 @media (width <= 375px) {
   .save-button {
     flex-direction: column;
+  }
+
+  .dialog {
+    inline-size: 100%; /*для коррекции блока */
   }
 }
 
