@@ -261,8 +261,8 @@
 }
 
 .dialog {
-  /* inline-size: var(--dialog-inline-size);
-  border-inline: var(--border);
+  inline-size: var(--dialog-inline-size);
+  /*border-inline: var(--border);
   border-block: var(--border);  для коррекции замечания */
   padding-block: var(--dialog-padding-block);
   padding-inline: var(--dialog-padding-inline);

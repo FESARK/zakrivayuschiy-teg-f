@@ -29,7 +29,7 @@
   --save-button-padding-inline: 1.25rem;
   --dialog-inline-size: clamp(21.313rem, 1.127vw + 21.048rem, 22.063rem);
   --dialog-padding-block: 1.875rem;
-  --dialog-padding-inline: 2.313rem;
+  --dialog-padding-inline: 2.25rem;
   --dialog-modal-button-padding-block: 0.563rem;
   --dialog-modal-button-padding-inline: 7rem;
   --heart-contour-color: #000;
